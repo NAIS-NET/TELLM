@@ -1,0 +1,4 @@
+hist_len: 12
+num_paths: 4
+num_layers: 2
+alpha: 0.0

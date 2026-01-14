@@ -1,0 +1,25 @@
+defaults:
+    - _self_                    # for overriding defaults
+    - experiment: te
+    # - model: tellm 
+    # - loader: base
+    # - training: base            # default training configuration
+    # - dataset: base             # default dataset configuration
+    # - task: te_geant            # default task configuration
+
+run_name: null
+seed: null                      # random seed for reproducibility
+
+project:
+    name: "tellm"         # name of the project
+    description: ""             # project description
+    version: 1.0                # version of the project
+    tags: null
+
+
+hydra:
+    verbose: false
+    run:
+        dir: "outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}"  # output directory for runs
+    output_subdir: "outputs"    # base output directory
+

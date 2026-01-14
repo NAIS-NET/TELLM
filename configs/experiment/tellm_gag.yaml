@@ -1,0 +1,17 @@
+# @package _global_
+defaults:
+    - /pipline: te
+    - /model: tellm
+    - override /dataset:
+        - abilene
+        - geant
+        - g50
+
+
+training:
+  optimizer:
+    lr: 1e-3
+  trainer:
+    max_epochs: 1
+  scheduler:
+    num_training_steps: 24000

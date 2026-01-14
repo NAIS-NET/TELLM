@@ -1,0 +1,18 @@
+solver_config:
+    policy_hidden_size: 3
+    num_gnn_layers: 3
+    num_transformer_layers: 2
+    dropout: 0.
+    num_mlp1_hidden_layers: 2
+    num_mlp2_hidden_layers: 2
+    num_heads: 2
+    num_paths_per_pair: 4
+    hist_len: 12
+    mag_decouple: true
+
+moe_config:
+    decoder: "moe"  # "default" or "moe"
+    num_experts: 4
+    moe_top_k: 2
+    noisy_gating: true
+    noise_epsilon: 1e-2

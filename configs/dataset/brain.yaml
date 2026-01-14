@@ -1,0 +1,26 @@
+brain:
+    topo: brain                 # str: Name of the topology to be used.
+    num_nodes: 161
+    weight: null                # str: Metric used for edge weights in shortest path finding (optional).
+    num_paths_per_pair: 4       # int: Number of paths per node pair.
+    pred: 0                     # int/bool: Use predicted TMs (0=False).
+    hist_len: 12                # int: Length of TM history to input.
+
+    train_set:
+        cluster: 0
+        start: 0
+        end: 8000
+
+    val_set:
+        cluster: 0
+        start: 8000
+        end: 8500
+
+    test_set:
+        cluster: 0
+        start: 8500
+        end: 9000
+
+    metric: MLU                 # str: Optimization metric (currently supports only 'MLU', not used).
+    failure_id: null            # int: Failure scenario ID (optional).
+# dynamic: 1                  # int/bool: Whether the topology is dynamic (1=True).

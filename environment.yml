@@ -1,0 +1,8 @@
+name: tellm
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.10
+  - nvidia::cuda-toolkit=12.4.0
+  - pip

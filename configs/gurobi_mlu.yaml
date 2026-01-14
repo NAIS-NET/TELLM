@@ -1,0 +1,17 @@
+# configs for calcualting mlu from gurobi
+
+topo: facebook_pod_a   # str: Name of the topology to be used.
+weight: null           # str: Metric used for edge weights (optional).
+metric: MLU            # str: Optimization metric (currently supports only 'MLU').
+
+num_paths_per_pair: 3  # int: Number of paths per node pair.
+framework: gurobi      # str: Optimization framework to use. harp/gurobi
+failure_id: null       # int: Failure scenario ID (optional).
+
+dynamic: 1             # int/bool: Whether the topology is dynamic (1=True).
+
+opt_start_idx: 0       # int: Start index for optimal computation.
+opt_end_idx: -1        # int: End index for optimal computation.
+
+mode: train
+pred: 0                # int/bool: Use predicted TMs (0=False).

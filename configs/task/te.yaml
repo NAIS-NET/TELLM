@@ -1,0 +1,10 @@
+data_path: src/te_utils/data
+paths_file: tunnels.txt
+
+hist_len: 12                    # history demands that can be seen
+num_paths_per_pair: 4           # int: Number of paths per node pair.
+
+policy_align_mode: False
+hist_alpha_base: 500
+global_alpha_base: 5
+cost_alpha_base: 1

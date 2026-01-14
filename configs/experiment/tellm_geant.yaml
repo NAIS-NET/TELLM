@@ -1,0 +1,19 @@
+# @package _global_
+defaults:
+    - /pipline: te
+    - /model: tellm
+    - override /dataset:
+        - geant
+
+
+training:
+  optimizer:
+    lr: 1e-3
+  trainer:
+    max_epochs: 3
+  scheduler:
+    num_training_steps: 24000
+
+model:
+  solver_config:
+    norm: true

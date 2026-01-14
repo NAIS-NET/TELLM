@@ -1,0 +1,27 @@
+# @package _global_
+defaults:
+    - /pipline: te
+    - /model: tellm
+    - override /dataset:
+        - abilene
+      
+
+seed: 0
+
+training:
+  optimizer:
+    _target_: torch.optim.AdamW     # Optimizer type
+    lr: 1e-3
+  trainer:
+    max_epochs: 1
+    # val_check_interval: 0.5
+  scheduler:
+    num_training_steps: 50000
+    num_warmup_steps: 0
+
+loader:
+  batch_size: 32
+  eval_batch_size: 32
+  test_batch_size: 1
+
+baseline: figret # harp, dote, figret

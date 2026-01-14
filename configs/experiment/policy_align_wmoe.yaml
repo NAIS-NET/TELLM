@@ -1,0 +1,32 @@
+# @package _global_
+defaults:
+    - /pipline: te
+    - /model: tellm
+    - override /dataset:
+        - abilene
+        - b4
+        - geant
+        - g50
+        # - facebook_pod_a
+
+seed: 42
+
+task:
+  policy_align_mode: True
+  # hist_alpha_base: 50
+  # global_alpha_base: 2.5
+  # cost_alpha_base: 1
+  hist_alpha_base: 4
+  global_alpha_base: 4
+  cost_alpha_base: 4
+
+training:
+  train_moe: true
+  pretrained_path: 'outputs/tellm_pretrained_abggf'
+  optimizer:
+    lr: 1e-3
+  trainer:
+    max_epochs: 1
+    val_check_interval: 0.1
+  scheduler:
+    num_training_steps: 48000

@@ -1,0 +1,7 @@
+num_gnn_layers: 3
+num_transformer_layers: 2
+dropout: 0.
+num_mlp1_hidden_layers: 2
+num_mlp2_hidden_layers: 2
+num_heads: 2
+num_paths_per_pair: 4

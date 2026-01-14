@@ -1,0 +1,37 @@
+# @package _global_
+defaults:
+    - /pipline: te
+    - /model: tellm
+    - override /dataset:
+        - kdl
+      
+
+seed: 42
+
+training:
+  optimizer:
+    _target_: torch.optim.Adam     # Optimizer type
+    lr: 7e-3
+  trainer:
+    max_epochs: 1
+    precision: bf16-true
+    limit_val_batches: 0
+    # val_check_interval: 0.5
+  scheduler:
+    num_training_steps: 50000
+    num_warmup_steps: 0
+
+loader:
+  batch_size: 1
+  eval_batch_size: 1
+  test_batch_size: 1
+  num_workers: 0
+
+model:
+  solver_config:
+    num_gnn_layers: 1
+    num_transformer_layers: 1
+    num_mlp1_hidden_layers: 1
+    num_mlp2_hidden_layers: 1
+
+baseline: harp # harp, dote, figret
